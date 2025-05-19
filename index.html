@@ -1,81 +1,49 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina web - pagina de practica</title>
-    
-    <style type="text/css">
-    body{
-        background-color: rgb(197, 197, 197);
-    }
-
-    img{
-        width: 250px;
-    }
-
-    h2{
-        color: rgb(216, 142, 32);
-        text-align: center;
-    }
-
-    
-    p{
-        color: black;
-        text-align: justify;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        font-size: 20px;
-    }
-
-    table{
-        border-radius: 12px;
-        text-decoration: none;
-    }
-    
-    h3{
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 20px;
-        color: rgb(142, 142, 44);
-    }
-    </style>
+    <title>Laboratorio 13</title>
 </head>
-
 <body>
-    <h1 style="font-size: 60px; color: brown; text-align: center; font-family: Arial, Helvetica, sans-serif;">Bienvenidos a este sitio web 2025</h1><br><br><hr>
+    <script>
+        //funciones matematicas
+        function sumar(a,b){
+            return a+b;
+        }
+        function restar(a,b){
+            return a-b;
+        }
+        function multi(a,b){
+            return a*b;
+        }
+        function divi(a,b){
+            return a/b;
+        }
+        //funcion calculadora 
+        function calculadora(n1,n2,operacion){
+            switch(operacion){
+                case 'sumar':
+                    return sumar(n1,n2);
+                case 'restar':
+                    return restar(n1,n2);
+                case 'multi':
+                    return multi(n1,n2);
+                case 'divi':
+                    return divi(n1,n2);
+                default:
+                    return "Operación no valida...";
+            }
+        }
+        let numero1=parseFloat(prompt("Ingrese el primer numero: "));
+        let numero2=parseFloat(prompt("Ingrese el segundo numero: "));
+        let operacion=prompt("Ingrese la operacion(sumar, restar, multi,divi)");
 
-    <h2 style="color: blue; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Redes sociales</h2>
-    <br><br>
+        let resultado=calculadora(numero1,numero2,operacion);
 
-    <h3> Dia Martes</h3>
-    <h4 style="color: violet;">Dia Miercoles</h4>
-    <h5 style="color: yellow;"> Dia Jueves</h5>
-    <h6 style="color: blue;"> Dia Viernes</h6>
-    <br><br><br><hr>
+        console.log("El resultado es: "+resultado);
+        document.write("El resultado es: "+resultado);
 
-    <table border="2px">
-    <tr>
-        <th>redes social</th>
-        <th>imagen de red social</th>
-    </tr>
-    <tr>
-        <td>Facebook</td>
-        <td><img src="./imagenes/facebook.png" alt="facebook"></td>
-    </tr>
-    <tr>
-        <td>Instagram</td>
-        <td><img src="./imagenes/instagram.png" alt="instagram" srcset=""></td>
-    </tr>
-    <tr>
-        <td>Twiter</td>
-    </tr>
-    </table> 
-<br><br>
-
-<h2>Conoce de redes sociales</h2>
-    <p>Nuevo texto de prueba sobre html y css</p><br><br>
-    <img src="./imagenes/redes_sociales.png" alt="redes sociales"><br><br>
-
-<footer>&copy;Olga</footer>   
+    </script>
 </body>
 </html>
-index (1).html
